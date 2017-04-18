@@ -9,7 +9,7 @@ class PrimeGeneratorTestCases(unittest.TestCase):
 
     def test_generator_returns_list(self):
         result = prime_number_generator(12)
-        self.assertEqual(type(result), list, msg='Invalid input')
+        self.assertEqual(type(result), list, msg='Invalid output')
 
     def test_generator_raises_exception_for_non_integer_args(self):
         with self.assertRaises(TypeError) as context:
