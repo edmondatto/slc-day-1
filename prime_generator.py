@@ -1,3 +1,5 @@
+import time
+
 """
 A function that takes one argument and returns a list of prime numbers from 
 0 to that argument.
