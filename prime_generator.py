@@ -7,6 +7,8 @@ A function that takes one argument and returns a list of prime numbers from
 
 
 def prime_number_generator(n):
+    # Mark the time at which function starts executing
+    start_time = time.time()
     # Check if argument is an integer
     if isinstance(n, int):
         # Check if argument is positive integer
@@ -18,6 +20,10 @@ def prime_number_generator(n):
                 num = number_set.pop()
                 prime_numbers.append(num)
                 number_set.difference_update(set(range(num * 2, n + 1, num)))
+            # Mark the time at which function stops executing
+            finish_time = time.time()
+            # Get the func's run time by getting the difference between the finish and start times
+            func_run_time = finish_time - start_time
             return prime_numbers
         else:
             # return empty list if the argument is a negative integer
